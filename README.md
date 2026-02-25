@@ -22,7 +22,7 @@ Lokalny menedżer haseł działający w terminalu. Przechowuje hasła w zaszyfro
 |---|---|
 | **Master Password** | Jedno hasło główne chroni wszystkie pozostałe |
 | **Szyfrowanie AES-128** | Hasła szyfrowane algorytmem Fernet (AES-CBC + HMAC) |
-| **Generator haseł** | Kryptograficznie bezpieczny generator (8–128 znaków) |
+| **Generator haseł** | Kryptograficznie bezpieczny generator (8-128 znaków) |
 | **Wyszukiwanie** | Szybkie wyszukiwanie haseł po fragmencie nazwy serwisu |
 | **Auto-czyszczenie** | Odszyfrowane hasło znika z ekranu po 10 sekundach |
 | **Limit prób logowania** | Maksymalnie 3 próby podania Master Password |
@@ -51,7 +51,7 @@ Lokalny menedżer haseł działający w terminalu. Przechowuje hasła w zaszyfro
 
 ```bash
 # Klonowanie repozytorium
-git clone <url-repozytorium>
+git clone https://github.com/mpalus-git/Local-Password-Manager.git
 cd Local Password Manager
 
 # Utworzenie środowiska wirtualnego (zalecane)
@@ -111,12 +111,10 @@ Samodzielny generator pozwala wygenerować bezpieczne hasło o długości 8-128 
 
 ```
 Local Password Manager/
-├── main.py            # Interfejs CLI — menu, logowanie, obsługa akcji
-├── crypto.py          # Szyfrowanie / deszyfrowanie, derivacja klucza (PBKDF2 + Fernet)
+├── main.py            # Interfejs CLI - menu, logowanie, obsługa akcji
+├── crypto.py          # Szyfrowanie / deszyfrowanie, derywacja klucza (PBKDF2 + Fernet)
 ├── db.py              # Warstwa dostępu do bazy danych SQLite
 ├── generator.py       # Kryptograficznie bezpieczny generator haseł
 ├── requirements.txt   # Zależności Pythona
 └── passwords.db       # Zaszyfrowana baza danych (tworzona przy pierwszym uruchomieniu)
 ```
-
----
